@@ -26,12 +26,12 @@ echo "0bfd792196ce0ec6f1c65d2a9ad00215b2926ef2c416b8d97615265194477117  actions-
 tar xzf ./actions-runner-linux-x64-2.298.2.tar.gz
 
 ## Important
-./config.sh --url https://github.com/ketangangal/SearchEngine-DataCollection --token <mention-you-token-here>
+./config.sh --url https://github.com/SuyodhanJ6/search-engine-data-collection --token <mention-you-token-here>
 ./run.sh
 
 ## Add Github runner as a service
 sudo ./svc.sh install
-sudo ./svc.sh start
+sudo ./svc.sh start 
 sudo ./svc.sh status
 
 ## To stop the service

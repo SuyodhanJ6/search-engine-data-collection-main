@@ -17,7 +17,7 @@ class MetaDataStore:
             for num, label in enumerate(self.labels):
                 records[f"{num}"] = label
 
-            self.mongo.database['labels'].insert_one(records)
+            self.mongo.database['Embeddings'].insert_one(records)
 
         except Exception as e:
             message = CustomException(e, sys)
