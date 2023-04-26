@@ -49,7 +49,6 @@ class DataStore:
 
     def run_step(self):
         try:
-    
             self.prepare_data()
             self.remove_unwanted_classes()
             self.sync_data()
