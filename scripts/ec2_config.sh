@@ -10,7 +10,7 @@ apt-cache policy docker-ce
 sudo apt install docker-ce -y
 sudo systemctl status docker
 
-sudo usermod -aG docker ubuntu
+sudo usermod -aG docker ubuntucurl -fsSL https://download.docker.com/linux/ubuntu/gpg 
 newgrp docker
 
 ## Aws cli installation
@@ -26,7 +26,7 @@ echo "0bfd792196ce0ec6f1c65d2a9ad00215b2926ef2c416b8d97615265194477117  actions-
 tar xzf ./actions-runner-linux-x64-2.298.2.tar.gz
 
 ## Important
-./config.sh --url https://github.com/SuyodhanJ6/search-engine-data-collection --token <mention-you-token-here>
+./config.sh --url https://github.com/SuyodhanJ6/search-engine-data-collection --token AOCLRTB2MF5R2ZWQFZ5C2VDEJI2EA
 ./run.sh
 
 ## Add Github runner as a service
