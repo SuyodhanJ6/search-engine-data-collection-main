@@ -3,6 +3,7 @@ import sys
 from zipfile import ZipFile
 import shutil
 from src.exception import CustomException
+from src.exception1 import SensorException
 
 
 
@@ -40,12 +41,13 @@ class DataStore:
     def sync_data(self):
         try:
             print("\n====================== Starting Data sync ==============================\n")
-            os.system(f"aws s3 sync { self.images } s3://reverse-iamge-hello/images/ ")
+            os.system(f"aws s3 sync {self.images} s3://reverse-iamge-hello/images/")
             print("\n====================== Data sync Completed     ==========================\n")
-
+            
         except Exception as e:
-            message = CustomException(e, sys)
-            return {"Created": False, "Reason": message.error_message}
+            raise SensorException(e, sys)
+            # message = CustomException(e, sys)
+            # return {"Created": False, "Reason": message.error_message}
 
     def run_step(self):
         try:
